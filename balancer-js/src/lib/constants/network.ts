@@ -1,4 +1,5 @@
 export enum Network {
+    BSC = 56,
     MAINNET = 1,
     ROPSTEN = 3,
     RINKEBY = 4,

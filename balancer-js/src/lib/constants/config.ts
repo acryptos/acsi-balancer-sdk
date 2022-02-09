@@ -1,9 +1,27 @@
 import { Network } from './network';
 import { BalancerNetworkConfig } from '@/types';
 
-export const balancerVault = '0xBA12222222228d8Ba445958a75a0704d566BF2C8';
+export const balancerVault = '0xa82f327BBbF0667356D2935C6532d164b06cEced';
 
 export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
+    [Network.BSC]: {
+        chainId: Network.BSC, //56
+        addresses: {
+            contracts: {
+                vault: '0xa82f327BBbF0667356D2935C6532d164b06cEced',
+                multicall: '0x850b719Fe517C0207Cbb87F0349aF84041493A71',
+            },
+            tokens: {
+                wrappedNativeAsset:
+                    '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+            },
+        },
+        urls: {
+            subgraph:
+                'https://api.thegraph.com/subgraphs/name/acryptosx/balancer-v2',
+        },
+        pools: {},
+    },
     [Network.MAINNET]: {
         chainId: Network.MAINNET, //1
         addresses: {
